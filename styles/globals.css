@@ -1,3 +1,9 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 html,
 body {
   padding: 0;
@@ -13,6 +19,11 @@ a {
 
 * {
   box-sizing: border-box;
+}
+@layer components {
+  .button {
+    @apply h-7 w-7 cursor-pointer hover:scale-125 transition transform duration-100 ease-out 
+  }
 }
 
 @media (prefers-color-scheme: dark) {
