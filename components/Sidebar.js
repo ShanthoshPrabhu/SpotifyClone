@@ -26,10 +26,11 @@ function Sidebar() {
 
     console.log(playlist)
 
-    function logOut () {
-      
-      window.location.replace('/login')
-      signOut();
+    function login () {
+      if (!session) {
+         window.location.replace('/login')
+      }
+     
     }
 
   return (
@@ -38,8 +39,8 @@ function Sidebar() {
      lg:max-w-[15rem]'>
         <div className='space-y-4'>
            <button className='flex items-center space-x-2 hover:text-white' 
-           onClick={logOut}>
-               <p>Log out</p>
+           onClick={login}>
+               <p>Log in</p>
             </button>
             <button className='flex items-center space-x-2 hover:text-white' >
                <HomeIcon className='w-5 h-5'/>
