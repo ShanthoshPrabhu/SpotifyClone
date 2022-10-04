@@ -7,6 +7,7 @@ import { playlistIdState, playlistState } from '../atoms/playlistAtom';
 
 
 
+
 function Sidebar() {
    const {data:session,status} = useSession();
    const spotifyApi = useSpotify();
@@ -27,9 +28,7 @@ function Sidebar() {
     console.log(playlist)
 
     function login () {
-      if (!session) {
-         window.location.replace('/login')
-      }
+         window.location.replace('/')
      
     }
 

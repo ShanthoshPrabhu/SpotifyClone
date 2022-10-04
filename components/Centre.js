@@ -36,7 +36,8 @@ function Centre() {
   },[spotifyApi ,playlistId])
 
   function logout () {
-    window.location.replace('/login')
+    window.location.replace('/')
+    signOut()
     
   }
   console.log('cent',playlist)

@@ -38,16 +38,17 @@ providers: [
  }),
  // ...add more providers here
 ],
+secret:process.env.NEXTAUTH_SECRET ,
 
 pages:{
- signIn:'/login'
+ signIn:'/'
 },
 
 callbacks:{
  
  async jwt ({token , account , user}) {
      //initial signin
-     
+     console.log(token)
      if (account && user ) {
          return {
              ...token,
